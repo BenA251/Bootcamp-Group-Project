@@ -51,8 +51,10 @@ $( document ).ready(pageFunction());
 
 
 $(document).ready(function () {
+    // This will load tasks from local storage on page load
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
+    // Function to render tasks
 function renderTasks() {
     const taskList = $('#taskList');
     taskList.empty();
@@ -84,12 +86,21 @@ function renderTasks() {
         }
 
         taskList.append(listItem);
+
+        $('#taskList').on('click', 'li', function () {
+            $(this).toggleClass();
+        });
+    
     });
     }
 
+    
+
+  // This is the function to save tasks to local storage
     function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
     }
+     // Event listener for the Add button
     $('#addButton').on('click', function () {
     const taskInput = $('#taskInput');
      const newTask = {
