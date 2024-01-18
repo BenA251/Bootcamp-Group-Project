@@ -38,9 +38,9 @@ fetch(queryURL)
     })
     .then(function (data) {
     //access word 
-    $("#DIV1").text(data[0].word);
+    $("#wordOfDay").text(data[0].word);
     //access definition
-    $("#DIV2").text(data[0].meanings[0].definitions[0].definition);
+    $("#definition").text(data[0].meanings[0].definitions[0].definition);
       })
 
     }
