@@ -1,6 +1,18 @@
 
+body {
+    background-color: #d0d6d6;
+}
+
+h1 {
+text-align: left;
+}
+
 .completed {
     text-decoration: line-through;
     color: grey;
 }
 
+#toDo, #weather {
+    color: #4c7273;
+    font-size: 3em;
+}
