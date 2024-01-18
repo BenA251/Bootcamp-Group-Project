@@ -12,6 +12,7 @@ text-align: left;
     color: grey;
 }
 
+
 #toDo, #weather, #newsAPI, #secondAPI, #thirdAPI {
     color: #4c7273;
     font-size: 3em;
@@ -24,13 +25,14 @@ text-align: left;
     border-style: none;
 }
 
-/* Add this CSS to your stylesheet */
+
 .card {
-    background-color: grey; /* Set your card background color */
+    background-color: grey; 
   }
   
   .card:hover .card-body {
     background-color: rgba(129, 175, 224, 0.8); 
     transition: opacity 0.3s ease-in-out;
   }
+  
   
