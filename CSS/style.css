@@ -22,17 +22,23 @@ text-align: left;
 
 .card .body, .card-body {
     background-color: #d0d6d6;
-    border-style: none;
+
 }
 
 
 .card {
     background-color: grey; 
+    border-color: grey;
+    border-style: none !important;
   }
   
   .card:hover .card-body {
     background-color: rgba(129, 175, 224, 0.8); 
     transition: opacity 0.3s ease-in-out;
+    border-style: none;
   }
-  
-  
+
+#wordOfDay {
+    font-size: 1.2em;
+    color:#4c7273;
+}
