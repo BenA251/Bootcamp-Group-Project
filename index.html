@@ -13,52 +13,56 @@
   <link rel="stylesheet" href="./CSS/style.css" />
   <title>Daily Assistant Application</title>
 </head>
+
 <body>
-<div id="toDoListSection" class="card row-md-6">
-  <div class="card">
-    <div class="card-body">
-      <div class="container mt-5">
-        <h1 class="text-center">To-Do List</h1>
-        <div class="input-group mb-3">
-          <input type="text" id="taskInput" class="form-control" placeholder="Add a new task" aria-label="Add a new task" aria-describedby="addButton">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button" id="addButton">Add</button>
-    </div>
-  </div>
-</div>
-<div class="container d-flex flex-row">
-  <div id="weatherSection" class="card col-lg-8">
-    <div class="card">
-      <div class="card-body">
-        This is some text within a card body.
+<div class="container">
+  <div class="row">
+    <div id="toDo" class="col-lg-8">
+      <h1>To-Do List</h1>
+      <div class="input-group mb-3">
+        <input type="text" id="taskInput" class="form-control" placeholder="Add your items here" aria-label="Add a new task" aria-describedby="addButton">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" id="addButton">Add</button>
+        </div>
       </div>
     </div>
+    <div id="weather" class="col-lg-4">WEATHER</div>
+    <div class="w-100"></div>
   </div>
-  <div id="wordSection" class="card col-lg-4">
-    <div class="card">
-      <div class="card-body">
-        This is some text within a card body.
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div id="newsAPI" class="card col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          This is the news API Card
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div id="factsSection" class="card row-md-6">
-  <div class="card">
-    <div class="card-body">
-      This is some text within a card body.
-    </div>
-  </div>
-</div>
-<div id="newsSection" class="card row-md-6">
-  <div class="card">
-    <div class="card-body">
-      This is some text within a card body.
+    <div class="col-lg-4">
+      <div id="secondAPI" class="card mb-4">
+        <div class="card">
+          <div class="card-body">
+            2nd API
+          </div>
+        </div>
+      </div>
+      <div id="thirdAPI" class="card">
+        <div class="card">
+          <div class="card-body">
+            3rd API
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
+  
+
 <footer>
-  <h4>Made by us- 2024</h4>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -68,3 +72,37 @@
 </body>
 
 </html>
+
+
+
+
+
+            <!-- <div id="weatherSection" class="card col-lg-8">
+              <div class="card">
+                <div class="card-body">
+                  This is some text within a card body.
+                </div>
+              </div>
+            </div>
+            <div id="wordSection" class="card col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  This is some text within a card body.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="factsSection" class="card row-md-6">
+            <div class="card">
+              <div class="card-body">
+                This is some text within a card body.
+              </div>
+            </div>
+          </div>
+          <div id="newsSection" class="card row-md-6">
+            <div class="card">
+              <div class="card-body">
+                This is some text within a card body.
+              </div>
+            </div>
+          </div> -->
