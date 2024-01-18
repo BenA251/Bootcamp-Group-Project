@@ -1,0 +1,36 @@
+
+body {
+    background-color: #d0d6d6;
+}
+
+h1 {
+text-align: left;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+#toDo, #weather, #newsAPI, #secondAPI, #thirdAPI {
+    color: #4c7273;
+    font-size: 3em;
+    background-color: #d0d6d6;
+    border-style: none;
+}
+
+.card .body, .card-body {
+    background-color: #d0d6d6;
+    border-style: none;
+}
+
+/* Add this CSS to your stylesheet */
+.card {
+    background-color: grey; /* Set your card background color */
+  }
+  
+  .card:hover .card-body {
+    background-color: rgba(129, 175, 224, 0.8); 
+    transition: opacity 0.3s ease-in-out;
+  }
+  
