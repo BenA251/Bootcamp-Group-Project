@@ -55,3 +55,32 @@ function renderTasks() {
 
     renderTasks();
 });
+
+// Facts of the Day
+$(document).ready(function () {
+
+    const factTextEl = $("#fact-text");
+    
+    function factOfTheDay() {
+        
+        $.ajax({
+            method: 'GET',
+            url: 'https://uselessfacts.jsph.pl/api/v2/facts/random?language=en',
+            contentType: 'application/json',
+            success: function(result) {
+                displayFact(result.text);
+            },
+            error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
+            }
+        });
+    }
+    
+    function displayFact(fact) {
+        factTextEl.text(fact)
+    }
+    
+    factOfTheDay();
+    });
+
+// end Facts of the Day code
