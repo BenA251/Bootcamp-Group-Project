@@ -127,8 +127,13 @@ border-bottom: solid black 1px;
     height: 100%;
     text-align: center;
     font-weight: 600;
+}
+
+#minTemp {
+border-right: 1px solid black;
 
 }
+
 
 
 #WeatherIconDiv {
