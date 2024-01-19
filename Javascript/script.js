@@ -94,6 +94,7 @@ fetch(queryLocationKey)
   .then(function (data) {
     locationKey = data.Key;
     locationName = data.EnglishName;
+    displayNews(locationName);
     getWeatherUpdate(locationKey);
         })
 
@@ -229,7 +230,7 @@ $(document).ready(function () {
 
 // News API
 
-function displayNews() {
+function displayNews(location) {
   const newsTextEl = $("#news-text");
 
   var requestOptions = {
@@ -239,7 +240,7 @@ function displayNews() {
   var params = {
       api_token: 'uRyUO8NPQfbJFYAwA1buugfRSCrRyHyLy0UTsrIw',
       categories: 'general',
-      search: 'Bristol',
+      search: `${location}`,
       limit: '1'
   };
   
@@ -264,4 +265,3 @@ function displayNews() {
   .catch(error => console.log('error', error));
 }
 
-displayNews();
