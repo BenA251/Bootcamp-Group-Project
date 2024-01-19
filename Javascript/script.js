@@ -37,17 +37,20 @@ fetch(queryURL)
       return response.json();
     })
     .then(function (data) {
-    //access word 
-    $("#wordOfDay").text(data[0].word);
-    //access definition
-    $("#definition").text(data[0].meanings[0].definitions[0].definition);
-      })
+      if (data.title === "No Definitions Found") {
+        console.log(data);
+        getRandomWord();
+      } else {
+        console.log(data);
+        //access word 
+        $("#wordOfDay").text(data[0].word);
+        //access definition
+        $("#definition").text(data[0].meanings[0].definitions[0].definition);
+}})
 
     }
 
 $( document ).ready(pageFunction());
-
-
 
 
 $(document).ready(function () {
@@ -145,5 +148,16 @@ $(document).ready(function () {
     
     factOfTheDay();
     });
+
+
+
+    
+
+
+
+
+
+
+
 
 // end Facts of the Day code
