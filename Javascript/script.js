@@ -78,6 +78,8 @@ fetch(queryURL)
 //function to get weather API location key value needed.
 
 var AccuWeatherAPIKey = `eSxgoyGiT952q1nqJ6Y7oQkK8iM8L5nS`
+var locationName;
+
 
 function getWeatherLocationKey() {
 
@@ -91,8 +93,9 @@ fetch(queryLocationKey)
   })
   .then(function (data) {
     locationKey = data.Key;
+    locationName = data.EnglishName;
     getWeatherUpdate(locationKey);
-    })
+        })
 
 }
 
@@ -108,13 +111,14 @@ function getWeatherUpdate(key) {
   })
   .then(function (data) {
     //min temp of day (works)
-    $("#minimumTemp").text(data.DailyForecasts[0].Temperature.Minimum.Value + " °C");
+    $("#minTempDiv").text(data.DailyForecasts[0].Temperature.Minimum.Value + " °C");
     //max temp of day (works)
-    $("#maximumTemp").text(data.DailyForecasts[0].Temperature.Maximum.Value + " °C");
+    $("#maxTempDiv").text(data.DailyForecasts[0].Temperature.Maximum.Value + " °C");
     //weather description
-    $("#weatherDescription").text(data.DailyForecasts[0].Day.IconPhrase);
+    $("#WeatherDescriptionDiv").text(`it's ` + data.DailyForecasts[0].Day.IconPhrase + ` in ` + locationName);
     //icon number
-    $("#weatherIcon").css({"background-image":`url(https://developer.accuweather.com/sites/default/files/0${data.DailyForecasts[0].Day.Icon}-s.png)`});
+    $("#WeatherIcon").css({"background-image":`url(https://developer.accuweather.com/sites/default/files/0${data.DailyForecasts[0].Day.Icon}-s.png)`});
+    $("#dateDiv").text(dayjs().format('DD/MM/YYYY'));
     
    
     })
