@@ -3,6 +3,25 @@ body {
     background-color: #d0d6d6;
 }
 
+p {
+    font-size: 0.5em;
+
+}
+
+.container {
+    margin-right: 100px !important;
+}
+
+.otherRow
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-left: none !important;
+    align-items: flex-end;
+
+}
+
 
  header {
 display: flex;
@@ -17,6 +36,10 @@ padding-left: 10px;
 
 h1 {
 text-align: left;
+}
+
+h2 {
+    font-size: 0.8em;
 }
 
 .completed {
@@ -51,6 +74,12 @@ text-align: left;
   }
 
 #wordOfDay {
-    font-size: 1.2em;
+    font-size: 0.9em;
     color:#4c7273;
 }
+
+.card-body {
+    max-height: 200px; /* Set a fixed height for the card body */
+    overflow-y: auto; /* Enable vertical scroll if content overflows */
+    max-width: 900px;
+  }

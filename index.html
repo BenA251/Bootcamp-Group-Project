@@ -18,8 +18,7 @@
   <header>
     <h1> Daily Assistant</h1>
   </header>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
       <div id="toDo" class="col-lg-8">
         TO DO LIST
         <div class="input-group">
@@ -32,42 +31,42 @@
           <!-- Tasks will be added dynamically here -->
         </ul>
       </div>
-  
-      <div id="weather" class="col-lg-4">
-        WEATHER
-      </div>
-    </div>
-  </div>
-
-
-<div class="container">
-  <div class="row">
-    <div id="newsAPI" class="card col-lg-8"> NEWS
-      <div class="card">
-        <div class="body">
-          This is the news API Card
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4">
-      <div id="secondAPI" class="card mb-4"> Word of the Day!
+      <div id="newsAPI" class="card col-lg-8"> NEWS
         <div class="card">
-          <div class="card-body">
-            <h2 id="wordOfDay"></h2>
-            <p id="definition"></p>
+          <div class="body">
+            This is the news API Card
           </div>
         </div>
       </div>
-      <div id="thirdAPI" class="card"> Useless Fact
-        <div class="card">
-          <div class="card-body">
-            <p id="fact-text"></p>
+
+  </div>
+
+
+
+  <div class="container otherRow">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-4">
+        <div id="weather" class="card mb-4">
+          WEATHER
+        </div>
+        <div id="secondAPI" class="card mb-4"> Word of the Day!
+          <div class="card">
+            <div class="card-body">
+              <h2 id="wordOfDay"></h2>
+              <p id="definition"></p>
+            </div>
+          </div>
+        </div>
+        <div id="thirdAPI" class="card"> Useless Fact
+          <div class="card">
+            <div class="card-body">
+              <p id="fact-text"></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
   
 
