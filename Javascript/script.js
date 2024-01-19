@@ -38,10 +38,8 @@ fetch(queryURL)
     })
     .then(function (data) {
       if (data.title === "No Definitions Found") {
-        console.log(data);
         getRandomWord();
       } else {
-        console.log(data);
         //access word 
         $("#wordOfDay").text(data[0].word);
         //access definition
@@ -49,6 +47,82 @@ fetch(queryURL)
 }})
 
     }
+
+//weather API
+
+
+//intial script to get user geolocation needed to tailor weather report.
+
+  var latitude = document.getElementById("latitude");
+  var longitude = document.getElementById("longitude");
+  var latitudeValue;
+  var longitudeValue;
+
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      latitude.innerHTML = "Geolocation is not supported by this browser.";
+      longitude.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+  
+  function showPosition(position) {
+    latitude.innerHTML = "Latitude: " + position.coords.latitude;
+    longitude.innerHTML = "Longitude: " + position.coords.longitude;
+    latitudeValue = position.coords.latitude;
+    longitudeValue = position.coords.longitude;
+    getWeatherLocationKey();
+  }
+
+//function to get weather API location key value needed.
+
+var AccuWeatherAPIKey = `eSxgoyGiT952q1nqJ6Y7oQkK8iM8L5nS`
+
+function getWeatherLocationKey() {
+
+var locationKey;
+
+var queryLocationKey = `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${AccuWeatherAPIKey}&q=${latitudeValue}%2C%20${longitudeValue}`
+
+fetch(queryLocationKey)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    locationKey = data.Key;
+    getWeatherUpdate(locationKey);
+    })
+
+}
+
+//function to get weather details based on location key value.
+
+function getWeatherUpdate(key) {
+  
+  var queryWeather = `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${key}?apikey=${AccuWeatherAPIKey}&details=true&metric=true`
+
+  fetch(queryWeather)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    //min temp of day (works)
+    $("#minimumTemp").text(data.DailyForecasts[0].Temperature.Minimum.Value + " °C");
+    //max temp of day (works)
+    $("#maximumTemp").text(data.DailyForecasts[0].Temperature.Maximum.Value + " °C");
+    //weather description
+    $("#weatherDescription").text(data.DailyForecasts[0].Day.IconPhrase);
+    //icon number
+    $("#weatherIcon").css({"background-image":`url(https://developer.accuweather.com/sites/default/files/0${data.DailyForecasts[0].Day.Icon}-s.png)`});
+    
+   
+    })
+}
+
+getLocation();
+
+ //end of weather API
 
 $( document ).ready(pageFunction());
 
