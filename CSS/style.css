@@ -1,12 +1,20 @@
+:root{
+--bgcolor:#d0d6d6;
+--test: aqua;
+
+}
+
+
 
 body {
-    background-color: #d0d6d6;
+    background-color: var(--bgcolor)
 }
 
 p {
     font-size: 0.5em;
-
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
+
 
 .container {
     margin-right: 100px !important;
@@ -44,7 +52,7 @@ h2 {
 
 .completed {
     text-decoration: line-through;
-    color: grey;
+    color: var(--bgcolor)
 }
 
 
@@ -56,22 +64,21 @@ h2 {
 }
 
 .card .body, .card-body {
-    background-color: #d0d6d6;
+    background-color: var(--bgcolor)
 
 }
 
 
 .card {
-    background-color: grey; 
-    border-color: grey;
+    background-color: var(--bgcolor);
+    border-color: var(--bgcolor);
     border-style: none !important;
   }
   
-  .card:hover .card-body {
-    background-color: rgba(129, 175, 224, 0.8); 
-    transition: opacity 0.3s ease-in-out;
+  /* .card:hover .card-body {
     border-style: none;
-  }
+    color:#4c7273
+  } */
 
 #wordOfDay {
     font-size: 0.9em;
@@ -79,10 +86,11 @@ h2 {
 }
 
 .card-body {
-    max-height: 200px; /* Set a fixed height for the card body */
-    overflow-y: auto; /* Enable vertical scroll if content overflows */
+    max-height: 200px;
+    overflow-y: auto; 
     max-width: 900px;
   }
+
 
 
 
@@ -152,3 +160,18 @@ width: 75px;
  font-weight: 900;
 
 }
+=======
+  .input-group {
+    max-width: 1000px;
+  }
+
+  .input-group-append {
+    padding-left: 20px;
+  }
+
+  .form-control {
+    border-radius: 20px !important;
+  }
+  
+
+
