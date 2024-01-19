@@ -227,15 +227,41 @@ $(document).ready(function () {
     factOfTheDay();
     });
 
+// News API
 
+function displayNews() {
+  const newsTextEl = $("#news-text");
 
-    
+  var requestOptions = {
+      method: 'GET'
+  };
+  
+  var params = {
+      api_token: 'uRyUO8NPQfbJFYAwA1buugfRSCrRyHyLy0UTsrIw',
+      categories: 'general',
+      search: 'Bristol',
+      limit: '1'
+  };
+  
+  var esc = encodeURIComponent;
+  var query = Object.keys(params)
+      .map(function(k) {return esc(k) + '=' + esc(params[k]);})
+      .join('&');
+  
+  fetch("https://api.thenewsapi.com/v1/news/all?" + query, requestOptions)
+  .then(response => response.json())
+    .then(result => {
+      const articleTitle = result.data[0].title;
+      const articleText = result.data[0].description;
+      console.log(result);
+      console.log(articleTitle);
+      console.log(articleText);
+      
+      result.data.forEach(article => {
+          newsTextEl.append(`<h3>${articleTitle}</h3><br><p>${articleText}</p>`)
+      });
+  })
+  .catch(error => console.log('error', error));
+}
 
-
-
-
-
-
-
-
-// end Facts of the Day code
+displayNews();
