@@ -3,6 +3,18 @@ body {
     background-color: #d0d6d6;
 }
 
+
+ header {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80px;
+background-color: lightblue;
+padding-left: 10px;
+
+ }
+
+
 h1 {
 text-align: left;
 }

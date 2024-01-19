@@ -53,8 +53,6 @@ fetch(queryURL)
 $( document ).ready(pageFunction());
 
 
-
-
 $(document).ready(function () {
     // This will load tasks from local storage on page load
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
