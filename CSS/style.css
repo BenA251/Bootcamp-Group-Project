@@ -107,7 +107,7 @@ border: solid rgb(12, 154, 197) 2px;
 border-radius: 50%;
 height: 350px;
 width: 350px;
-background-color: rgb(16, 186, 238);
+background-color: var(--bgcolor);
 align-items: center;
 justify-content: center;
 }
@@ -129,6 +129,7 @@ justify-content: center;
 align-items: center;
 font-weight: 600;
 border-bottom: solid black 1px;
+text-align: center;
 }
 
 #minTemp, #maxTemp {
