@@ -118,8 +118,13 @@ function getWeatherUpdate(key) {
     //weather description
     $("#WeatherDescriptionDiv").text(`it's ` + data.DailyForecasts[0].Day.IconPhrase + ` in ` + locationName);
     //icon number
+    if (data.DailyForecasts[0].Day.Icon < 10) {
     $("#WeatherIcon").css({"background-image":`url(https://developer.accuweather.com/sites/default/files/0${data.DailyForecasts[0].Day.Icon}-s.png)`});
     $("#dateDiv").text(dayjs().format('DD/MM/YYYY'));
+    } else {
+    $("#WeatherIcon").css({"background-image":`url(https://developer.accuweather.com/sites/default/files/${data.DailyForecasts[0].Day.Icon}-s.png)`});
+    $("#dateDiv").text(dayjs().format('DD/MM/YYYY'));  
+    }
     
    
     })
@@ -253,9 +258,6 @@ function displayNews(location) {
     .then(result => {
       const articleTitle = result.data[0].title;
       const articleText = result.data[0].description;
-      console.log(result);
-      console.log(articleTitle);
-      console.log(articleText);
       
       result.data.forEach(article => {
           newsTextEl.append(`<h3>${articleTitle}</h3><br><p>${articleText}</p>`)
