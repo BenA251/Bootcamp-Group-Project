@@ -52,7 +52,7 @@ h2 {
 
 .completed {
     text-decoration: line-through;
-    color: var(--bgcolor)
+    /* color: var(--bgcolor) */
 }
 
 
@@ -174,7 +174,7 @@ width: 75px;
 
   .form-control {
     border-radius: 20px !important;
-    max-width: 40%;
+    max-width: 80%;
     
   }
   
@@ -211,9 +211,14 @@ width: 75px;
   margin-bottom: 0.4em;
 }
 
+#toDo, #newsAPI {
+  padding-left: 2em;
+}
 
 
 
-#taskinput .form-control{
+
+
+/* #taskinput .form-control{
   max-width: 10%; 
- } 
+ }  */

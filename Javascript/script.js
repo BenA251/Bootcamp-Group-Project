@@ -153,6 +153,10 @@ function renderTasks() {
         renderTasks();
         });
 
+        if (task.completed) {
+          listItem.addClass('completed');
+          }
+
         const deleteButton = $('<button class="btn btn-danger btn-sm ml-2">Delete</button>');
         deleteButton.on('click', function () {
         tasks.splice(index, 1);
@@ -162,11 +166,6 @@ function renderTasks() {
 
         listItem.prepend(checkbox);
         listItem.append(deleteButton);
-
-        if (task.completed) {
-        listItem.addClass('completed');
-        }
-
         taskList.append(listItem);
 
         $('#taskList').on('click', 'li', function () {
