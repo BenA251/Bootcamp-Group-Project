@@ -24,8 +24,9 @@ p {
 .otherRow
 {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
-    width: 50%;
+    width: 35%;
     margin-left: none !important;
     align-items: flex-end;
 
