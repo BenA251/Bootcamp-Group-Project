@@ -1,14 +1,15 @@
-:root{
---bgcolor:#d0d6d6;
---test: aqua;
 
+
+.container-fluid {
+padding-left: 4em;
 }
 
 
 
-body {
-    background-color: var(--bgcolor)
+.body{
+  background: transparent;
 }
+
 
 p {
     font-size: 0.5em;
@@ -36,7 +37,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 80px;
-background-color: lightblue;
 padding-left: 10px;
 
  }
@@ -57,10 +57,13 @@ h2 {
 
 
 #toDo, #weather, #newsAPI, #secondAPI, #thirdAPI {
-    color: #4c7273;
+    color: white;
     font-size: 3em;
-    background-color: #d0d6d6;
     border-style: none;
+}
+
+#newsAPI {
+  padding-top: 4em;
 }
 
 .card .body, .card-body {
@@ -70,8 +73,7 @@ h2 {
 
 
 .card {
-    background-color: var(--bgcolor);
-    border-color: var(--bgcolor);
+background: transparent;
     border-style: none !important;
   }
   
@@ -139,8 +141,9 @@ border-bottom: solid black 1px;
 
 #minTemp {
 border-right: 1px solid black;
-
 }
+
+
 
 
 
@@ -148,7 +151,7 @@ border-right: 1px solid black;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 25%;
+/* height: 25%; */
 }
 
 #WeatherIcon {
@@ -171,8 +174,14 @@ width: 75px;
 
   .form-control {
     border-radius: 20px !important;
+    max-width: 40%;
+    
   }
   
+  #taskList, .list-group{
+    border-radius: 20px !important;
+    max-width: 800px;
+  }
 
 
   .video-container {
@@ -197,5 +206,14 @@ width: 75px;
   }
   
 
+.list-group-item {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
 
 
+
+
+#taskinput .form-control{
+  max-width: 10%; 
+ } 
