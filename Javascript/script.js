@@ -138,72 +138,71 @@ $( document ).ready(pageFunction());
 
 
 $(document).ready(function () {
-    // This will load tasks from local storage on page load
-    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  // This will load tasks from local storage on page load
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-    // Function to render tasks
-function renderTasks() {
-    const taskList = $('#taskList');
-    taskList.empty();
+  // Function to render tasks
+  function renderTasks() {
+      const taskList = $('#taskList');
+      taskList.empty();
 
-    tasks.forEach((task, index) => {
-        const listItem = $('<li class="list-group-item d-flex justify-content-between align-items-center"></li>');
-        listItem.text(task.text);
+      tasks.forEach((task, index) => {
+          const listItem = $('<li class="list-group-item d-flex justify-content-between align-items-center"></li>');
+          
+          const taskText = $('<span></span>');
+          taskText.text(task.text);
 
-        const checkbox = $('<input type="checkbox">');
-        checkbox.prop('checked', task.completed);
-        checkbox.on('change', function () {
-        tasks[index].completed = $(this).prop('checked');
-        saveTasks();
-        renderTasks();
-        });
+          const checkbox = $('<input type="checkbox">');
+          checkbox.prop('checked', task.completed);
+          checkbox.on('change', function () {
+              tasks[index].completed = $(this).prop('checked');
+              saveTasks();
+              renderTasks();
+          });
 
-        if (task.completed) {
-          listItem.addClass('completed');
+          const deleteButton = $('<button class="btn btn-danger btn-sm ml-2">Delete</button>');
+          deleteButton.on('click', function () {
+              tasks.splice(index, 1);
+              saveTasks();
+              renderTasks();
+          });
+
+          listItem.append(checkbox);
+          listItem.append(taskText);
+          listItem.append(deleteButton);
+
+          if (task.completed) {
+              listItem.addClass('completed');
           }
 
-        const deleteButton = $('<button class="btn btn-danger btn-sm ml-2">Delete</button>');
-        deleteButton.on('click', function () {
-        tasks.splice(index, 1);
-        saveTasks();
-        renderTasks();
-        });
-
-        listItem.prepend(checkbox);
-        listItem.append(deleteButton);
-        taskList.append(listItem);
-
-        $('#taskList').on('click', 'li', function () {
-            $(this).toggleClass();
-        });
-    
-    });
-    }
-
-    
+          taskList.append(listItem);
+      });
+  }
 
   // This is the function to save tasks to local storage
-    function saveTasks() {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    }
-     // Event listener for the Add button
-    $('#addButton').on('click', function () {
-    const taskInput = $('#taskInput');
-     const newTask = {
-        text: taskInput.val(),
-        completed: false,
-    };
+  function saveTasks() {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
 
-    if (newTask.text !== '') {
-        tasks.push(newTask);
-        saveTasks();
-        renderTasks();
-        taskInput.val('');
-    }
-    });
+  // Event listener for the Add button
+  $('#addButton').on('click', function () {
+      const taskInput = $('#taskInput');
+      const newTask = {
+          text: taskInput.val(),
+          completed: false,
+      };
 
-    renderTasks();
+      if (newTask.text !== '') {
+          tasks.push(newTask);
+          saveTasks();
+          renderTasks();
+          taskInput.val('');
+      }
+  });
+
+  renderTasks();
 });
+
 
 // Facts of the Day
 $(document).ready(function () {
