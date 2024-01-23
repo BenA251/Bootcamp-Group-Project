@@ -77,7 +77,8 @@ fetch(queryURL)
 
 //function to get weather API location key value needed.
 
-var AccuWeatherAPIKey = `eSxgoyGiT952q1nqJ6Y7oQkK8iM8L5nS`
+// var AccuWeatherAPIKey = `eSxgoyGiT952q1nqJ6Y7oQkK8iM8L5nS`
+var AccuWeatherAPIKey = `lQIft71p6aq5BQY6ApIiqGydcSheULRG`
 var locationName;
 
 
