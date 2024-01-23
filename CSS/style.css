@@ -106,7 +106,7 @@ background: transparent;
 
 #weatherdata {
 display: flex;
-border: solid rgb(12, 154, 197) 2px;
+border: solid rgb(255, 255, 255) 2px; 
 border-radius: 50%;
 height: 350px;
 width: 350px;
@@ -122,7 +122,7 @@ justify-content: center;
  background-color: transparent;
  /* background-color: rgb(12, 154, 197); */
  flex-direction: column;
- border-bottom: solid black 1px;
+ /*border-bottom: solid rgb(255, 255, 255) 1px; */
 } 
 
 #dateDiv, #WeatherDescriptionDiv, #TempDiv {
@@ -132,7 +132,8 @@ height: 25%;
 justify-content: center;
 align-items: center;
 font-weight: 600;
-border-bottom: solid black 1px;
+color: white;
+/*border-bottom: solid rgb(255, 255, 255) 1px; */
 text-align: center;
 }
 
@@ -143,10 +144,11 @@ text-align: center;
     height: 100%;
     text-align: center;
     font-weight: 600;
+    color: white;
 }
 
 #minTemp {
-border-right: 1px solid black;
+/*border-right: solid rgb(255, 255, 255) 1px; */
 }
 
 
