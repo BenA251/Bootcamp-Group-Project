@@ -1,4 +1,6 @@
-
+:root {
+--textCol: aliceblue;
+}
 
 .container-fluid {
 padding-left: 4em;
@@ -20,6 +22,7 @@ p {
 
 .container {
     margin-right: 100px !important;
+    overflow-y: auto;
 }
 
 .otherRow
@@ -45,11 +48,13 @@ padding-left: 10px;
 
 
 h1 {
-text-align: left;
+text-align: center; 
+color: var(--textCol);
 }
 
 h2 {
     font-size: 0.8em;
+    color: var(--textCol);
 }
 
 .completed  {
@@ -59,7 +64,7 @@ h2 {
 
 
 #toDo, #weather, #newsAPI, #secondAPI, #thirdAPI {
-    color: white;
+  color: var(--textCol);
     font-size: 3em;
     border-style: none;
 }
@@ -69,7 +74,7 @@ h2 {
 }
 
 .card .body, .card-body {
-    background-color: var(--bgcolor)
+overflow-y: scroll;
 
 }
 
@@ -218,6 +223,11 @@ width: 75px;
 
 #taskList, .btn {
   text-decoration: none !important;
+}
+
+.container-scrollable {
+  height: 800px;
+  overflow-y: auto;
 }
 
 
