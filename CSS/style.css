@@ -50,6 +50,7 @@ padding-left: 4em;
 
   #toDo, #newsAPI {
     padding-left: 2em;
+    padding-top: 1em;
   }
 
   .input-group {
@@ -112,13 +113,6 @@ h2 {
 .completed  {
     text-decoration: line-through !important;
     /* color: var(--bgcolor) */
-}
-
-
-
-
-#newsAPI {
-  padding-top: 4em;
 }
 
 /* .card .body, .card-body {
