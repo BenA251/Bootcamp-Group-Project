@@ -82,6 +82,7 @@ var AccuWeatherAPIKey = `lQIft71p6aq5BQY6ApIiqGydcSheULRG`
 var locationName;
 
 
+
 function getWeatherLocationKey() {
 
 var locationKey;
