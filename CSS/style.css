@@ -2,16 +2,83 @@
 --textCol: aliceblue;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding-left: 10px;
+  }
+
+h1 {
+  text-align: center; 
+  color: var(--textCol);
+  }
+
+body {
+    background: transparent;
+      overflow-y: hidden;
+      overflow-x: hidden; 
+    }
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+
 .container-fluid {
 padding-left: 4em;
 }
 
-
-
-.body{
-  background: transparent;
+.container-scrollable {
+  height: 800px;
+  overflow-y: auto;
 }
 
+  #toDo, #weather, #newsAPI, #secondAPI, #thirdAPI {
+    color: var(--textCol);
+      font-size: 3em;
+      border-style: none;
+      overflow-y: hidden;
+      overflow-x: hidden; 
+  }
+
+  #toDo, #newsAPI {
+    padding-left: 2em;
+  }
+
+  .input-group {
+    max-width: 1000px;
+  }
+
+  .input-group-append {
+    padding-left: 20px;
+  }
+
+  .form-control {
+    border-radius: 20px !important;
+    max-width: 80%;
+    
+  }
+
+  .list-group-item {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+  }
+  
+  #taskList, .btn {
+    text-decoration: none !important;
+  }
+  
+  #taskList, .list-group{
+    border-radius: 20px !important;
+    max-width: 800px;
+  }
 
 p {
     font-size: 0.5em;
@@ -19,10 +86,9 @@ p {
     color: white;
 }
 
-
 .container {
-    margin-right: 100px !important;
-    overflow-y: auto;
+  margin-right: 100px !important;
+  overflow-y: auto;
 }
 
 .otherRow
@@ -33,23 +99,9 @@ p {
     width: 35%;
     margin-left: none !important;
     align-items: flex-end;
+    overflow-y: hidden;
+    overflow-x: hidden; 
 
-}
-
-
- header {
-display: flex;
-justify-content: center;
-align-items: center;
-height: 80px;
-padding-left: 10px;
-
- }
-
-
-h1 {
-text-align: center; 
-color: var(--textCol);
 }
 
 h2 {
@@ -63,25 +115,22 @@ h2 {
 }
 
 
-#toDo, #weather, #newsAPI, #secondAPI, #thirdAPI {
-  color: var(--textCol);
-    font-size: 3em;
-    border-style: none;
-}
+
 
 #newsAPI {
   padding-top: 4em;
 }
 
-.card .body, .card-body {
-overflow-y: scroll;
+/* .card .body, .card-body {
 
-}
+
+} */
 
 
 .card {
 background: transparent;
     border-style: none !important;
+    
   }
   
 
@@ -89,6 +138,8 @@ background: transparent;
 #wordOfDay {
     font-size: 0.9em;
     color:#4c7273;
+    overflow-y: hidden;
+    overflow-x: hidden; 
 }
 
 .card-body {
@@ -113,6 +164,7 @@ width: 350px;
 background-color: var(--bgcolor);
 align-items: center;
 justify-content: center;
+
 }
 
 #weatherdatainner {
@@ -170,34 +222,10 @@ width: 75px;
 
 }
 
-  .input-group {
-    max-width: 1000px;
-  }
-
-  .input-group-append {
-    padding-left: 20px;
-  }
-
-  .form-control {
-    border-radius: 20px !important;
-    max-width: 80%;
-    
-  }
-  
-  #taskList, .list-group{
-    border-radius: 20px !important;
-    max-width: 800px;
-  }
 
 
-  .video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+
+
   
   #background-video {
     position: absolute;
@@ -212,23 +240,9 @@ width: 75px;
   }
   
 
-.list-group-item {
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-}
 
-#toDo, #newsAPI {
-  padding-left: 2em;
-}
 
-#taskList, .btn {
-  text-decoration: none !important;
-}
 
-.container-scrollable {
-  height: 800px;
-  overflow-y: auto;
-}
 
 
 
