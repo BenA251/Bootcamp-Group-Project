@@ -17,8 +17,8 @@ h1 {
 
 body {
     background: transparent;
-      overflow-y: hidden;
-      overflow-x: hidden; 
+      /* overflow-y: hidden;
+      overflow-x: hidden;  */
     }
 
 .video-container {
@@ -116,11 +116,6 @@ h2 {
     text-decoration: line-through !important;
     /* color: var(--bgcolor) */
 }
-
-/* .card .body, .card-body {
-
-
-} */
 
 
 .card {
@@ -225,35 +220,27 @@ width: 75px;
     z-index: -1;
   }
   
-
   @media screen and (max-width: 992px) {
     .container-scrollable {
       overflow-y: auto;
+      max-height: 60vh; 
     }
-
-
+  
     .container {
       margin-right: 0 !important;
-      overflow-y: auto;
     }
   
     .otherRow {
       flex-direction: column;
       width: 100%;
-      margin-top: 28em;
+      margin-top: 2em; 
     }
   
-    .col-lg-8.offset-lg-4 {
-      margin-top: 0;
-    }
-
-#weatherdata
-    {
-    max-height: 45%;
-    max-width: 55%;
+    #weatherdata {
+      max-height: 45%;
+      max-width: 55%;
     }
   }
-  
   
 
 
