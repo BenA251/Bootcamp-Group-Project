@@ -16,24 +16,19 @@
 
 <body>
   <div class="main-container">
-  <div class="video-container">
-    <video autoplay muted loop id="background-video">
-      <source src="./Assets/Project Background.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
     <header>
       <h1> Daily Assistant Web Application</h1>
     </header>
 
-    <div id="newsAPI" class="card col-lg-8"> News Headlines
-      <div class="card">
-        <div class="body">
-          <p id="news-text"></p>
+
+    <div class=" toDo container-scrollable">
+      <div id="newsAPI" class="card col-lg-8"> News Headlines
+        <div class="card">
+          <div class="body">
+            <p id="news-text"></p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="container-scrollable">
   <div id="toDo" class="col-lg-8">
     To-Do List
     <div class="input-group">
@@ -47,11 +42,6 @@
     </ul>
   </div>
   </div>
-</div>
-
-
-
-
   <div class="container otherRow">
     <div class="row">
       <div class="col-lg-8 offset-lg-4">
@@ -87,7 +77,7 @@
             </div>
           </div>
         </div>
-        <div id="thirdAPI" class="card"> Useless Facts
+        <div id="thirdAPI" class="card"> Useless Facts 
           <div class="card">
             <div class="card-body">
               <p id="fact-text"></p>
@@ -95,17 +85,25 @@
           </div>
         </div>
       </div>
-    </div>
+  <div class="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="./Assets/Project Background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+
   </div>
+</div>
+
+
+
+
+
 
 
 
   
 
-<footer>
-  <p id="latitude">(Latitude Placeholder)</p>
-  <p id="longitude">(Longitude Placeholder)</p>
-</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
