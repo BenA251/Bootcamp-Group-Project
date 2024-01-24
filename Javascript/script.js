@@ -243,7 +243,8 @@ function displayNews(location) {
   };
   
   var params = {
-      api_token: 'uRyUO8NPQfbJFYAwA1buugfRSCrRyHyLy0UTsrIw',
+      api_token: `PliHxYcD4LPkVNVen8FR9XmvgKGGVrTr1z84qwiF`,
+      // api_token: 'uRyUO8NPQfbJFYAwA1buugfRSCrRyHyLy0UTsrIw',
       categories: 'general',
       search: `${location}`,
       limit: '1'
