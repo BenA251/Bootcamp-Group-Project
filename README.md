@@ -25,7 +25,15 @@ Why: To aid me with planning my days and make me more productive
 
 The following image shows the web application's appearance and functionality:
 
-![]()
+Screenshot 1 - To Do list which saves to local storage, A News and Weather Application which displays weather according to your location.
+
+![](images\Screenshot1.png)
+
+
+Screenshot 2 - A word of the day application which relies on two API, one to produce a random word and another to provide definition. A useless fact generator which uses another API.
+
+![](images\Screenshot2.png)
+
 
 
 <strong>Links</strong>
@@ -40,10 +48,14 @@ Challenge/Project Material was provided by course.
 
 Server APIs Source:
 
-Weather API: https://developer.accuweather.com/
+Weather API: https://developer.accuweather.com/ 
+
 Random Word API: https://api-ninjas.com/api/randomword 
+
 Dictionary API: https://dictionaryapi.dev/
+
 Useless Fact API: https://uselessfacts.jsph.pl/
+
 News API: https://www.thenewsapi.com/ 
 
 
