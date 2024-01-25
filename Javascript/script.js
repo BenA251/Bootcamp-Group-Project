@@ -141,7 +141,7 @@ $(document).ready(function () {
   // This will load tasks from local storage on page load
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-  // Function to render tasks
+  //  renderTasks function is responsible for updating the HTML to display the tasks.
   function renderTasks() {
       const taskList = $('#taskList');
       taskList.empty();
