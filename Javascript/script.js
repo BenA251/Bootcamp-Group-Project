@@ -260,7 +260,7 @@ function displayNews(location) {
       const articleText = result.data[0].description;
       
       result.data.forEach(article => {
-          newsTextEl.append(`<h3>${articleTitle}</h3><br><p>${articleText}</p>`)
+          newsTextEl.append(`<h3>${articleTitle}</h3><p>${articleText}</p>`)
       });
   })
   .catch(error => console.log('error', error));

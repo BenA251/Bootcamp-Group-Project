@@ -124,13 +124,16 @@ h2 {
     /* color: var(--bgcolor) */
 }
 
+h3 {
+  font-size: 0.7em;
+  color: var(--textCol);
+}
 
 .card {
 background: transparent;
     border-style: none !important;
     
   }
-  
 
 
 #wordOfDay {
