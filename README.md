@@ -18,8 +18,8 @@ Why: To aid me with planning my days and make me more productive
 * 	Provides user an interactive ‘to do’ list which saves to local storage remains after browser close
 * 	Provides weather for that day including Icon using server API.     (requires to be different to API used in previous challenges)
 * 	Provides at least one of the following additional features:
-* 	Word of the day including definition utilising Dictionary server API
-* 	Fact of the day utilising a server API.
+* 	Random Word including definition utilising Dictionary server API
+* 	Useless fact utilising a server API.
 * 	Provide News of the day using a server API.
 
 
