@@ -25,14 +25,21 @@ Why: To aid me with planning my days and make me more productive
 
 The following image shows the web application's appearance and functionality:
 
-Screenshot 1 - To Do list which saves to local storage, A News and Weather Application which displays weather according to your location.
+Screenshot 1 - To Do list which saves to local.
 
-![](images\Screenshot1.png)
+![](images/Screenshot1.png)
 
 
-Screenshot 2 - A word of the day application which relies on two API, one to produce a random word and another to provide definition. A useless fact generator which uses another API.
+Screenshot 2 - News and Weather Application which displays weather according to your location.
 
-![](images\Screenshot2.png)
+![](images/Screenshot2.png)
+
+
+
+Screenshot 3 - A word of the day application which relies on two API, one to produce a random word and another to provide definition. A useless fact generator which uses another API.
+
+
+![](images/Screenshot3.png)
 
 
 
