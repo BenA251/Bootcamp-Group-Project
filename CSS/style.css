@@ -51,7 +51,7 @@ padding-left: 4em;
   }
 
   #toDo, #newsAPI {
-    padding-left: 2em;
+   /* padding-left: 2em; */
     padding-top: 1em;
   }
 
@@ -98,10 +98,10 @@ p {
 {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 35%;
+    justify-content: flex-start;
+    padding-left: 20px;
     /* margin-left: none !important; */
-    align-items: flex-end;
+    align-items: center;
     /* overflow-y: hidden;
     overflow-x: hidden;  */
 
@@ -150,8 +150,8 @@ background: transparent;
 display: flex;
 border: solid rgb(255, 255, 255) 2px; 
 border-radius: 50%;
-height: 350px;
-width: 350px;
+height: 320px;
+width: 320px;
 background-color: var(--bgcolor);
 align-items: center;
 justify-content: center;
@@ -161,8 +161,8 @@ margin-top: 100px;
 
 #weatherdatainner {
  display: flex;
- height: 50%;
- width: 50%;
+ height: 62%;
+ width: 62%;
  background-color: transparent;
  /* background-color: rgb(12, 154, 197); */
  flex-direction: column;
@@ -222,7 +222,7 @@ width: 75px;
   
 
 
-  @media screen and (max-width: 992px) {
+ /* @media screen and (max-width: 992px) {
 
     .main-container {
       height: 90%;

@@ -68,8 +68,6 @@ fetch(queryURL)
   }
   
   function showPosition(position) {
-    latitude.innerHTML = "Latitude: " + position.coords.latitude;
-    longitude.innerHTML = "Longitude: " + position.coords.longitude;
     latitudeValue = position.coords.latitude;
     longitudeValue = position.coords.longitude;
     getWeatherLocationKey();
