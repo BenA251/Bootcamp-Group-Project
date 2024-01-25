@@ -75,8 +75,8 @@ fetch(queryURL)
 
 //function to get weather API location key value needed.
 
-var AccuWeatherAPIKey = `eSxgoyGiT952q1nqJ6Y7oQkK8iM8L5nS`
-// var AccuWeatherAPIKey = `lQIft71p6aq5BQY6ApIiqGydcSheULRG`
+//var AccuWeatherAPIKey = `eSxgoyGiT952q1nqJ6Y7oQkK8iM8L5nS`
+var AccuWeatherAPIKey = `lQIft71p6aq5BQY6ApIiqGydcSheULRG`
 var locationName;
 
 
@@ -241,8 +241,8 @@ function displayNews(location) {
   };
   
   var params = {
-      api_token: `PliHxYcD4LPkVNVen8FR9XmvgKGGVrTr1z84qwiF`,
-      // api_token: 'uRyUO8NPQfbJFYAwA1buugfRSCrRyHyLy0UTsrIw',
+      //api_token: `PliHxYcD4LPkVNVen8FR9XmvgKGGVrTr1z84qwiF`,
+      api_token: 'uRyUO8NPQfbJFYAwA1buugfRSCrRyHyLy0UTsrIw',
       categories: 'general',
       search: `${location}`,
       limit: '1'
